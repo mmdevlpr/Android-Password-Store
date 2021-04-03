@@ -50,6 +50,13 @@ internal fun Project.configureForAllProjects() {
         includeModule("com.github.open-keychain.open-keychain", "sshauthentication-api")
       }
     }
+    maven("https://dl.bintray.com/kotlin/kotlinx") {
+      name = "KotlinX Bintray"
+      content {
+        includeModule("org.jetbrains.kotlinx", "kotlinx-collections-immutable")
+        includeModule("org.jetbrains.kotlinx", "kotlinx-collections-immutable-jvm")
+      }
+    }
   }
   tasks.withType<KotlinCompile> {
     kotlinOptions {

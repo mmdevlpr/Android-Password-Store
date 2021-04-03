@@ -8,6 +8,10 @@ include(":app")
 
 include(":openpgp-ktx")
 
+include(":gopenpgp")
+
+include(":pgpman")
+
 pluginManagement {
   repositories {
     gradlePluginPortal()

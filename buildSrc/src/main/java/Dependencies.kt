@@ -6,7 +6,7 @@
 private const val KOTLIN_VERSION = "1.4.31"
 
 object Plugins {
-  const val androidGradlePlugin = "com.android.tools.build:gradle:4.1.3"
+  const val androidGradlePlugin = "com.android.tools.build:gradle:7.0.0-alpha12"
   const val binaryCompatibilityValidator = "org.jetbrains.kotlinx:binary-compatibility-validator:0.2.4"
   const val dokkaPlugin = "org.jetbrains.dokka:dokka-gradle-plugin:1.4.20"
   const val downloadTaskPlugin = "de.undercouch:gradle-download-task:4.1.1"
@@ -17,6 +17,9 @@ object Plugins {
 }
 
 object Dependencies {
+
+  const val COMPOSE_VERSION = "1.0.0-beta03"
+
   object Kotlin {
     object Coroutines {
 
@@ -50,6 +53,22 @@ object Dependencies {
     const val swiperefreshlayout = "androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01"
   }
 
+  object Compose {
+
+    const val activity = "androidx.activity:activity-compose:1.3.0-alpha04"
+    const val compiler = "androidx.compose.compiler:compiler:$COMPOSE_VERSION"
+    const val foundation = "androidx.compose.foundation:foundation:$COMPOSE_VERSION"
+    const val foundationLayout = "androidx.compose.foundation:foundation-layout:$COMPOSE_VERSION"
+    const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha03"
+    const val material = "androidx.compose.material:material:$COMPOSE_VERSION"
+    const val navigation = "androidx.navigation:navigation-compose:1.0.0-alpha09"
+    const val paging = "androidx.paging:paging-compose:1.0.0-alpha08"
+    const val runtime = "androidx.compose.runtime:runtime:$COMPOSE_VERSION"
+    const val ui = "androidx.compose.ui:ui:$COMPOSE_VERSION"
+    const val uiUnit = "androidx.compose.ui:ui-unit:$COMPOSE_VERSION"
+    const val uiTooling = "androidx.compose.ui:ui-tooling:$COMPOSE_VERSION"
+  }
+
   object FirstParty {
 
     const val zxing_android_embedded = "com.github.android-password-store:zxing-android-embedded:4.1.0-aps"
@@ -59,6 +78,8 @@ object Dependencies {
 
     const val bouncycastle = "org.bouncycastle:bcprov-jdk15on:1.67"
     const val commons_codec = "commons-codec:commons-codec:1.14"
+    const val crypto_android = "me.proton.core:crypto-android:1.0.2"
+    const val crypto_common = "me.proton.core:crypto-common:1.0.2"
     const val eddsa = "net.i2p.crypto:eddsa:0.3.0"
     const val fastscroll = "me.zhanghai.android.fastscroll:library:1.1.5"
     const val jgit = "org.eclipse.jgit:org.eclipse.jgit:3.7.1.201504261725-r"

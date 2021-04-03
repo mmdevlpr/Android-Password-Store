@@ -10,6 +10,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.edit
+import dev.msfjarvis.aps.pgp.KeyListActivity
 import dev.msfjarvis.aps.ui.crypto.DecryptActivity
 import dev.msfjarvis.aps.ui.passwords.PasswordStore
 import dev.msfjarvis.aps.util.auth.BiometricAuthenticator
@@ -20,6 +21,9 @@ class LaunchActivity : AppCompatActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
+    startActivity(Intent(this, KeyListActivity::class.java))
+    finish()
+    /*
     val prefs = sharedPrefs
     if (prefs.getBoolean(PreferenceKeys.BIOMETRIC_AUTH, false)) {
       BiometricAuthenticator.authenticate(this) {
@@ -39,6 +43,7 @@ class LaunchActivity : AppCompatActivity() {
     } else {
       startTargetActivity(true)
     }
+    */
   }
 
   private fun startTargetActivity(noAuth: Boolean) {
